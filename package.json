@@ -1,0 +1,8 @@
+{
+  "name": "cloudfront-invalidate-cache",
+  "version": "1.0.0",
+  "description": "Simple CLI to invalidate cache for AWS CloudFront.",
+  "license": "MIT",
+  "author": "Shouki SAKAMOTO <32442796+shouki-s@users.noreply.github.com>",
+  "main": "index.js"
+}
