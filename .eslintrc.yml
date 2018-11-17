@@ -1,0 +1,14 @@
+env:
+  es6: true
+extends:
+  - eslint:recommended
+  - plugin:prettier/recommended
+parserOptions:
+  ecmaVersion: 2017
+  sourceType: module
+rules:
+  prettier/prettier:
+    - error
+    - printWidth: 120
+      singleQuote: true
+      trailingComma: all

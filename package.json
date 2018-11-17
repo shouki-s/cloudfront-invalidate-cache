@@ -4,5 +4,12 @@
   "description": "Simple CLI to invalidate cache for AWS CloudFront.",
   "license": "MIT",
   "author": "Shouki SAKAMOTO <32442796+shouki-s@users.noreply.github.com>",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.2"
+  }
 }
