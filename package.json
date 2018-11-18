@@ -5,7 +5,10 @@
   "license": "MIT",
   "author": "Shouki SAKAMOTO <32442796+shouki-s@users.noreply.github.com>",
   "bin": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "aws-sdk": "^2.358.0",
+    "yargs": "^12.0.4"
+  },
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
