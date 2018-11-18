@@ -6,7 +6,7 @@ You can create invalidation with CNAME.
 ## Installation
 
 ```bash
-npm install https://github.com/shouki-s/cloudfront-invalidate-cache.git --save
+npm install cloudfront-invalidate-cache --save
 ```
 
 Also, you can install with `-g` (global) option.
