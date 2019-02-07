@@ -2,6 +2,7 @@
   "name": "cloudfront-invalidate-cache",
   "version": "1.0.1",
   "description": "Simple CLI to invalidate cache for AWS CloudFront.",
+  "keywords": ["aws", "cli", "cloudfront", "create-invalidation"],
   "homepage": "https://github.com/shouki-s/cloudfront-invalidate-cache",
   "bugs": {
     "url": "https://github.com/shouki-s/cloudfront-invalidate-cache/issues"
@@ -19,5 +20,8 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.15.2"
+  },
+  "engines": {
+    "node" : ">=8.0.0"
   }
 }
