@@ -9,7 +9,33 @@ You can create invalidation with CNAME.
 npm install cloudfront-invalidate-cache --save
 ```
 
-Also, you can install with `-g` (global) option.
+Also, you can install with `-g` (global) option. Alternatively, you can use `npx` to run it without installing.
+
+## AWS permissions
+
+You need 2 permissions to run cloudfront-invalidate-cache.
+
+- `cloudfront:CreateInvalidation`
+- `cloudfront:ListDistributions`
+
+The minimum policy to run is below.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudFrontInvalidateCache",
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:ListDistributions",
+                "cloudfront:CreateInvalidation"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
 
 ## Usage
 
@@ -17,7 +43,9 @@ Also, you can install with `-g` (global) option.
 cloudfront-invalidate-cache --cname your.domain.example.com
 ```
 
-## Arguments
+## Argument
+
+cloudfront-invalidate-cache has only one argument.
 
 ### `--cname` (require)
 
