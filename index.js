@@ -22,6 +22,9 @@ const cloudfront = new AWS.CloudFront();
 async function main() {
   let distributions = await listDistributions({});
   distributions = distributions.filter(dist => dist.Aliases.Items.includes(argv.cname));
+  if (distributions.length === 0) {
+    throw new Error(`Distribution matching cname "${argv.cname}" was not found.`);
+  }
   for (const dist of distributions) {
     await createInvalidation(dist.Id);
   }
@@ -61,4 +64,8 @@ async function createInvalidation(distId) {
     .promise();
 }
 
-main();
+main().catch(err => {
+  console.error(err);
+  process.exitCode = 1;
+  return err;
+});
