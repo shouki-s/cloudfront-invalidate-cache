@@ -28,6 +28,7 @@ async function main() {
   for (const dist of distributions) {
     await createInvalidation(dist.Id);
   }
+  console.log('Done!');
 }
 
 async function listDistributions() {
@@ -49,7 +50,7 @@ async function listDistributions() {
 }
 
 async function createInvalidation(distId) {
-  console.log(`create invalidation for ${distId}.`);
+  console.log(`Creating invalidation for ${distId}.`);
   await cloudfront
     .createInvalidation({
       DistributionId: distId,
