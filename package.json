@@ -2,7 +2,12 @@
   "name": "cloudfront-invalidate-cache",
   "version": "1.0.1",
   "description": "Simple CLI to invalidate cache for AWS CloudFront.",
-  "keywords": ["aws", "cli", "cloudfront", "create-invalidation"],
+  "keywords": [
+    "aws",
+    "cli",
+    "cloudfront",
+    "create-invalidation"
+  ],
   "homepage": "https://github.com/shouki-s/cloudfront-invalidate-cache",
   "bugs": {
     "url": "https://github.com/shouki-s/cloudfront-invalidate-cache/issues"
@@ -22,6 +27,6 @@
     "prettier": "^1.15.2"
   },
   "engines": {
-    "node" : ">=8.0.0"
+    "node": ">=8.0.0"
   }
 }
