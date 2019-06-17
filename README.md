@@ -43,10 +43,16 @@ The minimum policy to run is below.
 cloudfront-invalidate-cache --cname your.domain.example.com
 ```
 
+Or, without installing,
+
+```bash
+npx cloudfront-invalidate-cache --cname your.domain.example.com
+```
+
 ## Argument
 
 cloudfront-invalidate-cache has only one argument.
 
-### `--cname` (require)
+### `--cname <domain name>` (require)
 
 CNAME alias for the distribution.
