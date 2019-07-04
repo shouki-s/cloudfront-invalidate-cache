@@ -3,6 +3,9 @@
 Simple CLI to invalidate cache for AWS CloudFront.
 You can create invalidation with CNAME.
 
+[![npm](https://img.shields.io/npm/v/cloudfront-invalidate-cache.svg)](https://www.npmjs.com/package/cloudfront-invalidate-cache)
+[![NPM](https://img.shields.io/npm/l/cloudfront-invalidate-cache.svg)](LICENSE)
+
 ## Installation
 
 ```bash
