@@ -2,7 +2,7 @@
 'use strict';
 
 const yargs = require('yargs');
-const { listDistributions, createInvalidation } = require('./lib');
+const { invalidateCache } = require('./lib');
 
 const argv = yargs
   .option('cname', {
@@ -18,14 +18,7 @@ const argv = yargs
   .help().argv;
 
 async function main() {
-  let distributions = await listDistributions({});
-  distributions = distributions.filter(dist => dist.Aliases.Items.includes(argv.cname));
-  if (distributions.length === 0) {
-    throw new Error(`Distribution matching cname "${argv.cname}" was not found.`);
-  }
-  for (const dist of distributions) {
-    await createInvalidation(dist.Id);
-  }
+  await invalidateCache(argv.cname);
   console.log('Done!');
 }
 
