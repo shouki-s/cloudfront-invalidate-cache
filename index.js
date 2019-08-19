@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-const AWS = require('aws-sdk');
 const yargs = require('yargs');
+const { invalidateCache } = require('./lib');
 
 const argv = yargs
   .option('cname', {
@@ -17,56 +17,14 @@ const argv = yargs
   .demandOption('cname')
   .help().argv;
 
-const cloudfront = new AWS.CloudFront();
-
 async function main() {
-  let distributions = await listDistributions({});
-  distributions = distributions.filter(dist => dist.Aliases.Items.includes(argv.cname));
-  if (distributions.length === 0) {
-    throw new Error(`Distribution matching cname "${argv.cname}" was not found.`);
+  try {
+    await invalidateCache(argv.cname);
+    console.log('Done!');
+  } catch (err) {
+    console.error(err);
+    process.exitCode = 1;
   }
-  for (const dist of distributions) {
-    await createInvalidation(dist.Id);
-  }
-  console.log('Done!');
 }
 
-async function listDistributions() {
-  let distributions = [];
-
-  let data;
-  let marker;
-  do {
-    data = await cloudfront
-      .listDistributions({
-        Marker: marker,
-      })
-      .promise();
-    distributions = distributions.concat(data.DistributionList.Items);
-    marker = data.DistributionList.NextMarker;
-  } while (data.DistributionList.IsTruncated);
-
-  return distributions;
-}
-
-async function createInvalidation(distId) {
-  console.log(`Creating invalidation for ${distId}.`);
-  await cloudfront
-    .createInvalidation({
-      DistributionId: distId,
-      InvalidationBatch: {
-        CallerReference: String(new Date().getTime()),
-        Paths: {
-          Quantity: 1,
-          Items: ['/*'],
-        },
-      },
-    })
-    .promise();
-}
-
-main().catch(err => {
-  console.error(err);
-  process.exitCode = 1;
-  return err;
-});
+main();
