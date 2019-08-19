@@ -18,12 +18,13 @@ const argv = yargs
   .help().argv;
 
 async function main() {
-  await invalidateCache(argv.cname);
-  console.log('Done!');
+  try {
+    await invalidateCache(argv.cname);
+    console.log('Done!');
+  } catch (err) {
+    console.error(err);
+    process.exitCode = 1;
+  }
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exitCode = 1;
-  return err;
-});
+main();
