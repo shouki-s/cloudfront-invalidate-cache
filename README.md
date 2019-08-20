@@ -59,3 +59,17 @@ cloudfront-invalidate-cache has only one argument.
 ### `--cname <domain name>` (require)
 
 CNAME alias for the distribution.
+
+## APIs
+
+```javascript
+const { invalidateCache } = require('cloudfront-invalidate-cache');
+
+invalidateCache('your.domain.example.com')
+  .then(() => {
+    console.log('done!');
+  })
+  .catch(err => {
+    console.error(err);
+  });
+```
