@@ -18,7 +18,8 @@
   "main": "lib/index.js",
   "repository": "github:shouki-s/cloudfront-invalidate-cache",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "test": "jest"
   },
   "dependencies": {
     "aws-sdk": "^2.358.0",
