@@ -18,16 +18,19 @@
   "main": "lib/index.js",
   "repository": "github:shouki-s/cloudfront-invalidate-cache",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "test": "jest"
   },
   "dependencies": {
     "aws-sdk": "^2.358.0",
     "yargs": "^14.0.0"
   },
   "devDependencies": {
+    "aws-sdk-mock": "^4.5.0",
     "eslint": "^6.2.1",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2"
   },
   "engines": {
