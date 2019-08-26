@@ -5,6 +5,8 @@ You can create invalidation with CNAME.
 
 [![npm](https://img.shields.io/npm/v/cloudfront-invalidate-cache.svg)](https://www.npmjs.com/package/cloudfront-invalidate-cache)
 [![NPM](https://img.shields.io/npm/l/cloudfront-invalidate-cache.svg)](LICENSE)
+[![Build Status](https://travis-ci.com/shouki-s/cloudfront-invalidate-cache.svg?branch=master)](https://travis-ci.com/shouki-s/cloudfront-invalidate-cache)
+[![Coverage Status](https://coveralls.io/repos/github/shouki-s/cloudfront-invalidate-cache/badge.svg?branch=master)](https://coveralls.io/github/shouki-s/cloudfront-invalidate-cache?branch=master)
 
 ## Installation
 
