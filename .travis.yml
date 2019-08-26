@@ -9,4 +9,4 @@ jobs:
   include:
     - stage: Produce Coverage
       node_js: node
-      script: cat ./coverage/lcov.info | coveralls
+      script: yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
