@@ -1,0 +1,6 @@
+**/*.test.js
+.eslintrc.yml
+.gitignore
+.travis.yml
+jest.config.js
+*.tgz
