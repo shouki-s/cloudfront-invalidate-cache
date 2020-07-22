@@ -1,6 +1,6 @@
 {
   "name": "cloudfront-invalidate-cache",
-  "version": "1.1.6",
+  "version": "2.0.0",
   "description": "Simple CLI to invalidate cache for AWS CloudFront.",
   "keywords": [
     "aws",
@@ -22,19 +22,19 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "aws-sdk": "^2.358.0",
-    "yargs": "^14.0.0"
+    "aws-sdk": "^2.716.0",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {
-    "aws-sdk-mock": "^4.5.0",
-    "coveralls": "^3.0.6",
-    "eslint": "^6.2.1",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.9.0",
-    "prettier": "^1.18.2"
+    "aws-sdk-mock": "^5.1.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   }
 }
