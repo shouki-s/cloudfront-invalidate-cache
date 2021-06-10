@@ -22,7 +22,7 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "aws-sdk": "^2.716.0",
+    "aws-sdk": "^2.925.0",
     "yargs": "^15.4.1"
   },
   "devDependencies": {
