@@ -1,6 +1,6 @@
 {
   "name": "cloudfront-invalidate-cache",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Simple CLI to invalidate cache for AWS CloudFront.",
   "keywords": [
     "aws",
