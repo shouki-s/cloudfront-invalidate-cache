@@ -27,8 +27,3 @@ jobs:
           cache: "yarn"
       - run: yarn install --ignore-engines
       - run: yarn test
-      - uses: romeovs/lcov-reporter-action@v0.2.16
-        with:
-          title: ${{ matrix.node-version }}
-          lcov-file: ./coverage/lcov.info
-          github-token: ${{ secrets.GITHUB_TOKEN }}
